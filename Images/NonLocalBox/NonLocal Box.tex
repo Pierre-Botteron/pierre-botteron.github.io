@@ -1,0 +1,133 @@
+\documentclass{Fiche_Class}
+
+
+\newcommand{\PR}{\mathtt{PR}}
+
+
+
+\begin{document}
+
+
+\definecolor{blue8}{rgb}{0.1, 0.35, 0.45}
+
+\definecolor{qqttzz}{rgb}{0.,0.2,0.6}
+\definecolor{rxsfyq}{rgb}{0.09019607843137255,0.1843137254901961,0.5019607843137255}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{wwqqzz}{rgb}{0.4,0.,0.6}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-4., -3.2) rectangle (7, 0.1);
+
+% Arrows in the nonlocal box
+
+\newcommand{\mynumber}{0.15}
+
+
+%%% up-left arrow
+\draw [line width=2.pt] (-0.2,-1.2 + \mynumber)-- (-0.1,-1.04 + \mynumber);
+\draw [line width=2.pt] (-0.32,-1.06 + \mynumber)-- (-0.2,-1.2 + \mynumber);
+\draw [shift={(-0.8,-1.2)},line width=2.pt]  plot[domain=0.:1.5707963267948966,variable=\t]({1.*0.6*cos(\t r)+0.*0.6*sin(\t r)},{0.*0.6*cos(\t r)+1.*0.6*sin(\t r) + \mynumber});
+%%% up-right arrow
+\draw [line width=2.pt] (3.2,-1.2 + \mynumber)-- (3.1,-1.04 + \mynumber);
+\draw [line width=2.pt] (3.2,-1.2 + \mynumber)-- (3.32,-1.06 + \mynumber);
+\draw [shift={(3.8,-1.2)},line width=2.pt]  plot[domain=1.5707963267948966:3.141592653589793,variable=\t]({1.*0.6*cos(\t r)+0.*0.6*sin(\t r)},{0.*0.6*cos(\t r)+1.*0.6*sin(\t r) +  \mynumber});
+%%% bottom-left arrow
+\draw [line width=2.pt] (-0.8,-2.6)-- (-0.68,-2.48);
+\draw [line width=2.pt] (-0.8,-2.6)-- (-0.66,-2.7);
+\draw [shift={(3.8,-2.)},line width=2.pt]  plot[domain=3.141592653589793:4.71238898038469,variable=\t]({1.*0.6*cos(\t r)+0.*0.6*sin(\t r)},{0.*0.6*cos(\t r)+1.*0.6*sin(\t r)});
+%%% bottom-right arrow
+\draw [line width=2.pt] (3.8,-2.6)-- (3.68,-2.48);
+\draw [line width=2.pt] (3.8,-2.6)-- (3.66,-2.7);
+\draw [shift={(-0.8,-2.)},line width=2.pt]  plot[domain=-1.5707963267948966:0.,variable=\t]({1.*0.6*cos(\t r)+0.*0.6*sin(\t r)},{0.*0.6*cos(\t r)+1.*0.6*sin(\t r)});
+
+
+
+% Blue Rectangle
+\fill[line width=2.pt, color=blue8, fill=blue8, fill opacity=0.15000000596046448] (-1.,-2.) -- (4.,-2.) -- (4.,-1.2) -- (-1.,-1.2) -- cycle;
+% old color: rxsfyq
+\draw [line width=2.pt,color=blue8] (-1.,-2.)-- (4.,-2.);
+\draw [line width=2.pt,color=blue8] (4.,-2.)-- (4.,-1.2);
+\draw [line width=2.pt,color=blue8] (4.,-1.2)-- (-1.,-1.2);
+\draw [line width=2.pt,color=blue8] (-1.,-1.2)-- (-1.,-2.);
+
+\draw [line width=1.pt, dashed, color=black] (1.45, 0.)-- (1.45, -1.);
+\renewcommand{\mynumber}{-0.18}
+\draw [line width=1.pt, dashed, color=black] (1.45, -3.+ \mynumber)-- (1.45, -2.+ \mynumber);
+
+
+\draw (-1.0, -0.4) node[anchor=east] {$x$};
+\draw (3.9, -0.43) node[anchor=west] {$y$};
+\draw (-1.0, -2.6) node[anchor=east] {$a$};
+\draw (3.9, -2.6) node[anchor=west] {$b$};
+
+
+\draw [color=blue8](1.45, -1.6) node {\textbf{\large$\PR$}};
+%%%%\draw[color=zzttqq] (1.48, 3.4) node {\textbf{\sffamily Referee}};
+\draw[color=black] (-2.2, -1.6) node[anchor=east] {{$\mathscr Alice$}};
+\draw[color=black] (5., -1.6) node[anchor=west] {{$\mathscr Bob$}};
+
+\end{tikzpicture}
+
+
+
+
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, every node/.style={scale=2.3}, scale=1.]
+%\clip(-4., -3.2) rectangle (7, 0.1);
+
+% Arrows in the nonlocal box
+
+\newcommand{\mynumber}{0.15}
+\newcommand{\x}{1}
+\newcommand{\y}{0.7}
+
+
+%%% up-left arrow
+\draw [line width=2.pt] (-0.2 + \x,-1.2 + \mynumber + \y)-- (-0.1 + \x,-1.04 + \mynumber + \y);
+\draw [line width=2.pt] (-0.32 + \x,-1.06 + \mynumber + \y)-- (-0.2 + \x,-1.2 + \mynumber + \y);
+\draw [shift={(-0.8,-1.2)},line width=2.pt]  plot[domain=0.:1.5707963267948966,variable=\t]({1.*0.6*cos(\t r)+0.*0.6*sin(\t r) + \x},{0.*0.6*cos(\t r)+1.*0.6*sin(\t r) + \mynumber + \y});
+%%% up-right arrow
+\draw [line width=2.pt] (3.2 - \x,-1.2 + \mynumber + \y)-- (3.1 - \x,-1.04 + \mynumber + \y);
+\draw [line width=2.pt] (3.2 - \x,-1.2 + \mynumber + \y)-- (3.32 - \x,-1.06 + \mynumber + \y);
+\draw [shift={(3.8,-1.2)},line width=2.pt]  plot[domain=1.5707963267948966:3.141592653589793,variable=\t]({1.*0.6*cos(\t r)+0.*0.6*sin(\t r) - \x},{0.*0.6*cos(\t r)+1.*0.6*sin(\t r) +  \mynumber + \y});
+%%% bottom-left arrow
+\draw [line width=2.pt] (-0.8 + \x,-2.6)-- (-0.68 + \x,-2.48);
+\draw [line width=2.pt] (-0.8 + \x,-2.6)-- (-0.66 + \x,-2.7);
+\draw [shift={(-0.8,-2.)},line width=2.pt]  plot[domain=-1.5707963267948966:0.,variable=\t]({1.*0.6*cos(\t r)+0.*0.6*sin(\t r) + \x},{0.*0.6*cos(\t r)+1.*0.6*sin(\t r)});
+%%% bottom-right arrow
+\draw [line width=2.pt] (3.8 - \x,-2.6)-- (3.68 - \x,-2.48);
+\draw [line width=2.pt] (3.8 - \x,-2.6)-- (3.66 - \x,-2.7);
+\draw [shift={(3.8,-2.)},line width=2.pt]  plot[domain=3.141592653589793:4.71238898038469,variable=\t]({1.*0.6*cos(\t r)+0.*0.6*sin(\t r) - \x},{0.*0.6*cos(\t r)+1.*0.6*sin(\t r)});
+
+
+
+% Blue Rectangle
+\fill[line width=2.pt, color=blue8, fill=blue8, fill opacity=0.15000000596046448] (-1. + \x,-2.) -- (4. - \x,-2.) -- (4. - \x,-1.2 + \y) -- (-1. + \x,-1.2 + \y) -- cycle;
+% old color: rxsfyq
+\draw [line width=2.pt,color=blue8] (-1. + \x,-2.)-- (4. - \x,-2.);
+\draw [line width=2.pt,color=blue8] (4. - \x,-2.)-- (4. - \x,-1.2 + \y);
+\draw [line width=2.pt,color=blue8] (4. - \x,-1.2 + \y)-- (-1. + \x,-1.2 + \y);
+\draw [line width=2.pt,color=blue8] (-1. + \x,-1.2 + \y)-- (-1. + \x,-2.);
+
+
+%\draw (-1.0 + \x, -0.4) node[anchor=east] {$x$};
+%\draw (3.9 - \x, -0.43) node[anchor=west] {$y$};
+%\draw (-1.0 + \x, -2.6) node[anchor=east] {$a$};
+%\draw (3.9 - \x, -2.6) node[anchor=west] {$b$};
+
+
+\draw [color=blue8](1.45, -1.6 + \y/2) node {\textbf{\large$\PR$}};
+
+\end{tikzpicture}
+
+
+
+\end{document}
+
+
+
+
+
+
