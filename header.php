@@ -2,7 +2,7 @@
 https://openclassrooms.com/en/courses/918836-concevez-votre-site-web-avec-php-et-mysql/4239271-organisez-les-pages-de-votre-site-en-blocs-fonctionnels
  -->
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
 <head>
     <link href="http://gmpg.org/xfn/11" rel="profile">
