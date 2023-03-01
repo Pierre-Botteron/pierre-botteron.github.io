@@ -7,4 +7,59 @@
     margin-left: 20%;
     margin-right: 20%;
 }
+
+
+/* from: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details */
+
+/* details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+}
+
+details[open] {
+    padding: 0.5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0.5em;
+} */
   
+
+details {
+    font: 16px "Open Sans", Calibri, sans-serif;
+    width: 620px;
+    font-size: 75%;
+  }
+  
+  details > summary {
+    padding: 2px 6px;
+    width: 15em;
+    background-color: RGBa(106, 159, 181, 0.15);
+    border: none;
+    /*box-shadow: 3px 3px 4px RGBa(106, 159, 181, 1);*/
+    cursor: pointer;
+    /*list-style: ">";*/
+  }
+  
+  details > p {
+    border-radius: 0 0 10px 10px;
+    background-color: RGBa(106, 159, 181, 0.15);
+    padding: 4px 10px;
+    margin: 0;
+    box-shadow: 3px 3px 4px RGBa(106, 159, 181, 0.5);
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  details[open] > summary {
+    background-color: RGBa(106, 159, 181, 0.3);
+    color:black;
+  }
