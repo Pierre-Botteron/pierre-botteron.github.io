@@ -37,6 +37,40 @@
     </script>
     <script type="text/javascript"
         src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script> 
+
+    <!--See : view-source:https://les-mathematiques.net/-->
+    <script type="text/x-mathjax-config"> 
+        MathJax.Hub.Config({
+               extensions: ["tex2jax.js"],
+           jax: ["input/TeX","output/SVG"],//,"output/HTML-CSS"
+           tex2jax: {inlineMath: [["$","$"],["\\(","\\)"],["\\[","\\]"]]},
+           "HTML-CSS": {linebreaks: { imageFont:'Tex',automatic: true, width: "container"}},//imageFont: 'Tex',noReflows: true,
+           "SVG": {font: 'STIX-Web',linebreaks: { automatic: true ,width: "container"}},
+           "CommonHTML": { linebreaks: { automatic: true,width: "container" } },
+       
+           TeX: {
+               extensions: ["xypic.js",    "color.js", "extpfeil.js","AMSmath.js", "AMSsymbols.js", "autoload-all.js","stmaryrd.js","verb.js"],
+             Macros: {
+             N: "{\\bf N}",
+             D: "{\\bf D}",
+             Z: "{\\bf Z}",
+             Q: "{\\bf Q}",
+             R: "{\\bf R}",
+             C: "{\\bf C}",
+             bold: ["{\\bf #1}",1]
+           }
+       
+           },
+    //ici
+        });
+       
+           //"HTML-CSS": {fonts: 'STIX-web',
+            //imageFont: null,linebreaks: { automatic: true}
+       
+           //}
+       
+        
     </script>
 
 </head>
@@ -91,12 +125,12 @@
             
     <h1> Articles </h1>  
     
-    <p>
+    <!--<p>
         <span
         class="math inline">\((A,+,\times)\)</span> un anneau tel que <span
         class="math display">\[\forall (x,y)\in A^2, \quad(xy)^2 =
         x^2y^2\]</span>
-    </p>
+    </p>-->
     
     <p style="margin-top:-1.5cm;">
         <div style='display:flex; flex-wrap: wrap;'>
