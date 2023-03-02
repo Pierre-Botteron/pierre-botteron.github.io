@@ -39,27 +39,27 @@ details {
     font-size: 75%;
   }
   
-  details > summary {
-    padding: 2px 6px;
-    width: 15em;
-    background-color: RGBa(106, 159, 181, 0.15);
-    border: none;
-    /*box-shadow: 3px 3px 4px RGBa(106, 159, 181, 1);*/
-    cursor: pointer;
-    /*list-style: ">";*/
-  }
+details > summary {
+  padding: 2px 6px;
+  width: 15em;
+  background-color: RGBa(106, 159, 181, 0.15);
+  border: none;
+  /*box-shadow: 3px 3px 4px RGBa(106, 159, 181, 1);*/
+  cursor: pointer;
+  /*list-style: ">";*/
+}
   
-  details > p {
-    border-radius: 0 0 10px 10px;
-    background-color: RGBa(106, 159, 181, 0.15);
-    padding: 4px 10px;
-    margin: 0;
-    box-shadow: 3px 3px 4px RGBa(106, 159, 181, 0.5);
-    text-align: justify;
-    text-justify: inter-word;
-  }
-  
-  details[open] > summary {
-    background-color: RGBa(106, 159, 181, 0.3);
-    color:black;
-  }
+details > p {
+  border-radius: 0 0 10px 10px;
+  background-color: RGBa(106, 159, 181, 0.15);
+  padding: 4px 10px;
+  margin: 0;
+  box-shadow: 3px 3px 4px RGBa(106, 159, 181, 0.5);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+details[open] > summary {
+  background-color: RGBa(106, 159, 181, 0.3);
+  color:black;
+}
