@@ -93,7 +93,8 @@
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  text-decoration: underline;
+  text-decoration: underline dotted;
+  font-size: 1.25rem;
 }
 .sidebar-nav-item.active {
   font-weight: bold;
@@ -253,4 +254,22 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+/* Purple-Pierre */
+.theme-base-Purple-Pierre .sidebar {
+  background-color: #a385bb;
+}
+.theme-base-Purple-Pierre .content a,
+.theme-base-Purple-Pierre .related-posts li a:hover {
+  color: #a385bb;
+}
+
+/* Teal-Pierre */
+.theme-base-Teal-Pierre .sidebar {
+  background-color: #006d5bbb;
+}
+.theme-base-Teal-Pierre .content a,
+.theme-base-Teal-Pierre .related-posts li a:hover {
+  color: #028c75;
 }
