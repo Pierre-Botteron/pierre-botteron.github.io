@@ -71,13 +71,10 @@
 }
 
 /* Sidebar links */
-.sidebar a {
-  color: #fff;
-}
+/*.sidebar a {color: #fff;}*/
 
 /* About section */
 .sidebar-about h1 {
-
   margin-top: 0;
   line-height: 1.0;
   font-size: 3.25rem;
@@ -90,14 +87,56 @@
 .sidebar-nav-item {
   display: block;
   line-height: 1.75;
+  color: #fff;
+  font-size: 1.2rem;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline dotted;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
 }
 .sidebar-nav-item.active {
   font-weight: bold;
+}
+
+/* Sidebar nav2 */
+.sidebar-nav2 {
+  margin-bottom: 1rem;
+}
+.sidebar-nav2-item {
+  display: block;
+  line-height: 1.75;
+  font-size: 0.9rem;
+  color:rgba(255,255,255,.5);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+a.sidebar-nav2-item:hover,
+a.sidebar-nav2-item:focus {
+  text-decoration: underline dotted;
+  font-size: 1.05rem;
+}
+.sidebar-nav2-item.active {
+  font-weight: bold;
+}
+
+/* Sidebar nav2-active */
+.sidebar-nav2-active {
+  margin-bottom: 1rem;
+}
+.sidebar-nav2-active-item {
+  display: block;
+  line-height: 1.75;
+  font-size: 0.9rem;
+  color:#ffffffec;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+a.sidebar-nav2-active-item:hover,
+a.sidebar-nav2-active-item:focus {
+  text-decoration: underline dotted;
+  font-size: 1.05rem;
 }
 
 /* Sticky sidebar
@@ -272,4 +311,13 @@ a.sidebar-nav-item:focus {
 .theme-base-Teal-Pierre .content a,
 .theme-base-Teal-Pierre .related-posts li a:hover {
   color: #028c75;
+}
+
+/* Red-Pierre */
+.theme-base-Red-Pierre .sidebar {
+  background-color: #ac4143f4;
+}
+.theme-base-Red-Pierre .content a,
+.theme-base-Red-Pierre .related-posts li a:hover {
+  color: #ac4142;
 }
