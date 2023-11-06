@@ -76,7 +76,47 @@ details > p {
   text-justify: inter-word;
 }
 
+details:hover > summary {
+  background-color: RGBa(106, 159, 181, 0.22);
+  color:black;
+}
+
 details[open] > summary {
   background-color: RGBa(106, 159, 181, 0.3);
   color:black;
+}
+
+
+
+/* My icons: */
+.myGoogle{
+  color:#313131;
+  font-size: 70%;
+}
+.myGoogle:hover{
+  color:#4081EC;
+}
+
+.myGitHub{
+  color:#313131;
+  font-size: 70%;
+}
+.myGitHub:hover{
+  color:#58287A;
+}
+
+.myArXiv{
+  color:#313131;
+  font-size: 70%;
+}
+.myArXiv:hover{
+  color:#B31B1B;
+}
+
+.myOrcId{
+  color:#313131;
+  font-size: 70%;
+}
+.myOrcId:hover{
+  color:#86B616;
 }
