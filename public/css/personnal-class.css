@@ -88,35 +88,72 @@ details[open] > summary {
 
 
 
-/* My icons: */
-.myGoogle{
-  color:#313131;
+/* 
+*     My icons & Buttons
+*/
+
+.my-button {
+  border: none;
+  color: white;
+  background-color: #313131;
+  padding: 9px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight: bold;
   font-size: 70%;
+  /*transition-duration: 0.4s;*/
 }
-.myGoogle:hover{
-  color:#4081EC;
+.my-button:hover{
+  font-weight: bold;
+  background-color: #4c4c4c;
 }
 
-.myGitHub{
+.my-icon{
   color:#313131;
   font-size: 70%;
-}
-.myGitHub:hover{
-  color:#58287A;
 }
 
-.myArXiv{
-  color:#313131;
-  font-size: 70%;
-}
-.myArXiv:hover{
-  color:#B31B1B;
-}
+.my-button-abstract{padding: 9px 10px;}
 
-.myOrcId{
-  color:#313131;
-  font-size: 70%;
+.my-icon-Google:hover{color:#4081EC;}
+.my-button-Google:hover{background-color:#4081EC;}
+
+.my-icon-GitHub:hover{color:#58287A;}
+.my-button-GitHub:hover{background-color:#58287A;}
+
+.my-icon-ArXiv:hover{color:#B31B1B;}
+/*.my-button-ArXiv::after{
+  content:"ArXiv";
+}*/
+.my-button-ArXiv:hover{background-color: #B31B1B;}
+
+.my-icon-OrcId:hover{color:#86B616;}
+.my-button-OrcId:hover{background-color:#86B616;}
+
+.my-button-home{padding: 11px 25px;}
+.my-button-home:hover{background-color: #017663;}
+
+.my-button-research{padding: 13px 25px;}
+.my-button-research:hover{background-color: #6393a8;}
+
+
+.button1 {background-color: #04AA6D;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: black;} /* Black */
+
+.my-profile{color:#313131;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  border: none;
+  padding: 1px 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
 }
-.myOrcId:hover{
-  color:#86B616;
+.my-profile:hover{
+  background-color: rgb(228, 228, 228)
 }
