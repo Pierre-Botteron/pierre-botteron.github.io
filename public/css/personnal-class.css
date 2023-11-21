@@ -108,7 +108,7 @@ details[open] > summary {
 }
 .my-button:hover{
   font-weight: bold;
-  background-color: #4c4c4c;
+  background-color: #545454;
 }
 
 .my-icon{
@@ -116,7 +116,27 @@ details[open] > summary {
   font-size: 70%;
 }
 
-.my-button-abstract{padding: 9px 10px;}
+.my-button-abstract{
+  padding: 9px 10px;
+  border-radius: 10px;
+}
+.my-abstract {
+  position: relative;
+  display: inline-block;
+}
+.my-abstract-content {
+  display: none;
+  min-width: 40%;
+  max-width: 70%;
+  position: relative;
+  background-color: #f0f0f0;
+  overflow: auto;
+  border-radius: 10px;
+  border: none;
+  padding: 4px 10px;
+  font-size: 80%
+}
+.my-abstract:hover .my-abstract-content{display:block}
 
 .my-icon-Google:hover{color:#4081EC;}
 .my-button-Google:hover{background-color:#4081EC;}
@@ -155,5 +175,5 @@ details[open] > summary {
   margin: 4px 2px;
 }
 .my-profile:hover{
-  background-color: rgb(228, 228, 228)
+  background-color: rgb(220, 219, 219)
 }

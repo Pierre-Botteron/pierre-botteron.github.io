@@ -217,7 +217,12 @@ function myFunction() {
                         <a href="https://www.math.univ-toulouse.fr/~pellegri/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Clément Pellegrini</span></a>.
                     </small>
                     <br>
-                    <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
+                    <div class="my-abstract">
+                        <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
+                        <p class="my-abstract-content">
+                            Coming soon...
+                        </p>
+                    </div>
                     <button class="my-button my-button-ArXiv"><i class="far fa-bookmark"></i>&nbsp;&nbsp;ArXiv</button>
                     <a href="https://github.com/Pierre-Botteron/Algebra-of-Boxes-code" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-GitHub"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub</button></a>
 
@@ -236,7 +241,16 @@ function myFunction() {
                         <span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Marc-Olivier Proulx</span>.
                     </small>
                     <br>
-                    <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
+                    <div class="my-abstract">
+                        <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
+                        <p class="my-abstract-content">
+                            Non-signalling boxes ($\mathcal{N\!S}$) are theoretical resources
+                            defined by the principle of no-faster-than-light communication. They generalize quantum correlations ($\mathcal Q$), and some of them are known to collapse communication complexity ($\mathcal{CC}$).
+                            However, this collapse is strongly believed to be unachievable in Nature, so its study provides intuition on which theories are unrealistic.
+                            <br><br>
+                            In the present letter, we find a better sufficient condition for a nonlocal box to collapse $\mathcal{CC}$, thus extending the known collapsing region. In some slices of $\mathcal{N\!S}$, we show this condition coincides with an area outside of an ellipse.
+                        </p>
+                    </div>
                     <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2302.00488"><button class="my-button my-button-ArXiv"><i class="far fa-bookmark"></i>&nbsp;&nbsp;ArXiv</button></a>
                     <a href="Slideshows-and-posters/2023-03-Ellipse-result.pdf" target="_blank" rel="noopener noreferrer"><button class="my-button"><i class="far fa-sticky-note"></i>&nbsp;&nbsp;Poster</button></a>
                 <!--<details>
@@ -260,8 +274,23 @@ function myFunction() {
                     <!--[<small><a href="Articles/RapportStageM2RI.pdf" target="_blank" rel="noopener noreferrer"><i class="far fa-file-alt"></i>&nbsp;M2 thesis</a></small>]-->
                     <strong>Master's thesis</strong> &#8212;
                     <i><small>Nonlocal Boxes and Communication Complexity</small></i> </li>
-                    <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
-                    <a target="_blank" rel="noopener noreferrer" href="Articles/RapportStageM2RI.pdf"><button class="my-button"><i class="far fa-file-alt"></i>&nbsp;&nbsp;M2 thesis</button></a>
+                    <div class="my-abstract">
+                        <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
+                        <p class="my-abstract-content">
+                            <i>Supervisors: Anne Broadbent, Ion Nechita, Clément Pellegrini</i>.<br><br>
+    
+                            The famous $\texttt{CHSH}$ game displays strict demarcations between three canonical families of correlations known as classical $\mathcal{L}$, quantum $\mathcal{Q}$ and non-signalling $\mathcal{N\!S}$.
+                            Although Alice and Bob 
+                            cannot win more than 75% of probability in the classical case (Bell's Inequality), 
+                            they can outperform this limit as long as they are provided with quantum correlations, thereby reaching Tsirelson's Bound $\approx$ 85%.
+                            Doing even better, post-quantum strategies, formalized with <em>non-local boxes</em>, can win with up to 100% probability, yet without violating non-signalling axiom (no faster-than-light communication).<br><br>
+    
+                            Among many attempts, <em>communication complexity</em> is conjectured to provide an answer: as opposed to quantum correlations which are known to induce <em>non-trivial</em> communication complexity, some post-quantum boxes are shown to render it <em>trivial</em>. 
+                            To this day, the question is still open, and in the present report, after making a detailed historical overview, we provide a new partial answer.
+                            We propose a new approach to <em>distillation</em> with what we call the <em>algebra of boxes</em> and <em>orbit</em> of a box, which leads to disclosing new trivial areas, some numerically and others explicitly.
+                        </p>
+                    </div>
+                    <a target="_blank" rel="noopener noreferrer" href="Articles/2022-06-MSc-Thesis.pdf"><button class="my-button"><i class="far fa-file-alt"></i>&nbsp;&nbsp;M2 thesis</button></a>
                 <!--<details>
                     <summary>Show abstract</summary>
                     <p>
@@ -284,8 +313,19 @@ function myFunction() {
                     <strong>Bachelor's thesis</strong> &#8212;
                     <i><small>Tensors in Quantum Information Theory</small></i> 
                 </li>
-                <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
-                <a target="_blank" rel="noopener noreferrer" href="Articles/RapportStageM1.pdf"><button class="my-button"><i class="far fa-file-alt"></i>&nbsp;&nbsp;M1 thesis</button></a>
+                <div class="my-abstract">
+                    <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
+                    <div class="my-abstract-content">
+                        <i>Supervisor: Ion Nechita</i>.<br><br>
+
+                        Our main motivation in this report is to examine some properties of tensors: their rank, their decompositions and their norms, in a tensor space of the form $\mathbb C^{n_1}\otimes \dots \otimes \mathbb C^{n_N}$.
+                        Since tensors generalize matrices, one may wonder if some interesting matrix properties are preserved in the more general framework of tensors.<br>
+                        <br>
+                        
+                        We will see that the notions of tensor rank and of tensor norms behave as in the matrix case, but some tensor decompositions fail: e.g. there is no singular value decomposition for tensors. Eventually, we will study some applications to Quantum Information Theory, and in particular we will explore the surprising result that the <em>geometric measure of entanglement</em> is non-additive.
+                    </div>
+                </div>
+                <a target="_blank" rel="noopener noreferrer" href="Articles/2020-09-M1-Thesis.pdf"><button class="my-button"><i class="far fa-file-alt"></i>&nbsp;&nbsp;M1 thesis</button></a>
                 <!--<details>
                     <summary>Show abstract</summary>
                     <p>
@@ -304,8 +344,21 @@ function myFunction() {
                     <strong>Bachelor's thesis</strong> &#8212;
                     <i><small>The Dold-Thom Theorem</small></i> 
                 </li>
+                <div class="my-abstract">
                     <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
-                    <a target="_blank" rel="noopener noreferrer" href="Articles/RapportL3.pdf"><button class="my-button"><i class="far fa-file-alt"></i>&nbsp;&nbsp;L3 thesis</button></a>
+                    <p class="my-abstract-content">
+                        <i>Supervisors: Maximilien Péroux, Brooke Shipley</i>.<br><br>
+
+                        The main aim of this project is to give an unusual approach of singular homology theory through algebraic topology, studying the celebrated Dold-Thom theorem which is at the junction of both:
+                        \[
+                            \widetilde H_n(X;\, \mathbb Z)=\pi_{n+1}\left(SP(\Sigma \widetilde X)\right).
+                        \]
+                        After considering elementary concepts of category theory, we will study the notions of pushout and exact sequence. 
+                        Then, troughout the whole report, we will introduce some fundamental tools such as suspensions, reduced cones, cofibrations or CW-complexes, which will lead us to the proof of the Dold-Thom theorem.
+                    </p>
+                </div>
+                    
+                    <a target="_blank" rel="noopener noreferrer" href="Articles/2019-05-BSc-Thesis.pdf"><button class="my-button"><i class="far fa-file-alt"></i>&nbsp;&nbsp;L3 thesis</button></a>
                 <!--<details>
                     <summary>Show abstract</summary>
                     <p>
@@ -324,7 +377,7 @@ function myFunction() {
             <hr>
            
             <font size="3">
-                <p style="color:#c2c2c2">
+                <p style="color:#c2c2c2; margin-bottom: 5cm;">
                     <i>Icons provided by <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer" style="color:#c2c2c2">FontAwesome</a>. 
                     LaTeX equations displayed using <a target="_blank"  rel="noopener noreferrer" href="https://github.com/mathjax/MathJax" style="color:#c2c2c2">MathJax</a>.</i>
                 </p>
