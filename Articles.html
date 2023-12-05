@@ -31,6 +31,44 @@
     <!-- JS -->
     <script src="public/js/font.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/996508455b.js" crossorigin="anonymous"></script>
+    <script>
+        function AreAllOpen(maxValue) {
+            for (let i=1; i<=maxValue; i++) {
+                if (document.getElementById(i).style.display != "block") {return false;}
+            }
+            return true;
+        }
+    </script>
+    <script>
+        function ShowAbstract(text) {
+            var x = document.getElementById(text);
+            if (x.style.display === "block"){
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+            var text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all';
+            if (AreAllOpen('5')) {
+                text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Collapse all';
+            };
+            document.getElementById("open-all").innerHTML = text2;
+        }
+    </script>
+    <script>
+        function OpenAll(maxValue) {
+            var text1="block";
+            var text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Collapse all';
+            if (AreAllOpen(maxValue)) {
+                text1="none";
+                text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all';
+            };
+            for (let i=1; i<=maxValue; i++){
+                document.getElementById(i).style.display = text1;
+            };
+            document.getElementById("open-all").innerHTML = text2;
+        }
+    </script>
+    
 
     <!-- To input LaTeX text in HTML: https://tex.stackexchange.com/questions/23804/how-to-incorporate-tex-mathematics-into-a-website -->
     <!--<script type="text/x-mathjax-config">
@@ -151,6 +189,9 @@
         <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/search/?query=Pierre+Botteron&searchtype=all&source=header"><i class="fas fa-bookmark my-icon my-icon-ArXiv"></i></a>
         <a target="_blank" rel="noopener noreferrer" href="https://orcid.org/0000-0002-3861-0934"><i class="fa-brands fa-orcid my-icon my-icon-OrcId"></i></a> 
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/Pierre-Botteron"><i class="fab fa-github my-icon my-icon-GitHub"></i></a>
+        <div class="my-abstract" style="font-size: 50%; vertical-align: text-bottom;">
+            <button id="open-all" onclick="OpenAll('5')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all</button>
+        </div>
     </h1>  
     
     <!--<p>
@@ -179,8 +220,8 @@
     </ul>-->
 
     
+    
 
-    <hr>
 
             <h2 id="Pre-prints">Pre-prints</h2>
 
@@ -218,9 +259,12 @@ function myFunction() {
                     </small>
                     <br>
                     <div class="my-abstract">
-                        <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
-                        <p class="my-abstract-content">
-                            Communication complexity quantifies how difficult it is for two distant
+                        <button onclick="ShowAbstract('5')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
+                    </div>
+                    <a href="https://arxiv.org/abs/2312.00725" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-ArXiv"><i class="far fa-bookmark"></i>&nbsp;&nbsp;ArXiv</button></a>
+                    <a href="https://github.com/Pierre-Botteron/Algebra-of-Boxes-code" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-GitHub"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub</button></a>
+                    <p id="5" class="my-abstract-content">
+                        Communication complexity quantifies how difficult it is for two distant
 computers to evaluate a function $f(X,Y)$ where the strings $X$ and $Y$ are
 distributed to the first and second computer, respectively and under the
 constraint of exchanging as few bits as possible. Surprisingly, some nonlocal
@@ -231,7 +275,7 @@ communication. The Popescu-Rohrlich ($\mathtt{PR}$) box is an example of such a 
 resource, but a comprehensive description of the set of collapsing nonlocal
 boxes remains elusive.
 <br><br>
- In this work, we carry out an algebraic study of the structure of wirings
+In this work, we carry out an algebraic study of the structure of wirings
 connecting nonlocal boxes, thus defining the notion of the "product of boxes"
 $\mathtt{P}\boxtimes\mathtt{Q}$, and we show related associativity and
 commutativity results. This gives rise to the notion of the "orbit of a box",
@@ -241,10 +285,7 @@ previously-reported numerical intuitions concerning the best way to wire
 consecutive boxes, and to numerically and analytically recover
 recently-identified noisy $\mathtt{PR}$ boxes that collapse communication complexity for
 different types of noise models.
-                        </p>
-                    </div>
-                    <a href="https://arxiv.org/abs/2312.00725" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-ArXiv"><i class="far fa-bookmark"></i>&nbsp;&nbsp;ArXiv</button></a>
-                    <a href="https://github.com/Pierre-Botteron/Algebra-of-Boxes-code" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-GitHub"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub</button></a>
+                    </p>
 
                 <li> [<small>2023</small>] 
                     <!--[<small><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2302.00488"><i class="far fa-bookmark"></i>&nbsp;ArXiv</a> &#8212; 
@@ -262,17 +303,18 @@ different types of noise models.
                     </small>
                     <br>
                     <div class="my-abstract">
-                        <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
-                        <p class="my-abstract-content">
-                            Non-signalling boxes ($\mathcal{N\!S}$) are theoretical resources
-                            defined by the principle of no-faster-than-light communication. They generalize quantum correlations ($\mathcal Q$), and some of them are known to collapse communication complexity ($\mathcal{CC}$).
-                            However, this collapse is strongly believed to be unachievable in Nature, so its study provides intuition on which theories are unrealistic.
-                            <br><br>
-                            In the present letter, we find a better sufficient condition for a nonlocal box to collapse $\mathcal{CC}$, thus extending the known collapsing region. In some slices of $\mathcal{N\!S}$, we show this condition coincides with an area outside of an ellipse.
-                        </p>
+                        <button onclick="ShowAbstract('4')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
                     </div>
                     <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2302.00488"><button class="my-button my-button-ArXiv"><i class="far fa-bookmark"></i>&nbsp;&nbsp;ArXiv</button></a>
                     <a href="Slideshows-and-posters/2023-03-Ellipse-result.pdf" target="_blank" rel="noopener noreferrer"><button class="my-button"><i class="far fa-sticky-note"></i>&nbsp;&nbsp;Poster</button></a>
+
+                    <p id="4" class="my-abstract-content">
+                        Non-signalling boxes ($\mathcal{N\!S}$) are theoretical resources
+                        defined by the principle of no-faster-than-light communication. They generalize quantum correlations ($\mathcal Q$), and some of them are known to collapse communication complexity ($\mathcal{CC}$).
+                        However, this collapse is strongly believed to be unachievable in Nature, so its study provides intuition on which theories are unrealistic.
+                        <br><br>
+                        In the present letter, we find a better sufficient condition for a nonlocal box to collapse $\mathcal{CC}$, thus extending the known collapsing region. In some slices of $\mathcal{N\!S}$, we show this condition coincides with an area outside of an ellipse.
+                    </p>
                 <!--<details>
                     <summary>Show abstract</summary>
                     <p>
@@ -295,22 +337,23 @@ different types of noise models.
                     <strong>Master's thesis</strong> &#8212;
                     <i><small>Nonlocal Boxes and Communication Complexity</small></i> </li>
                     <div class="my-abstract">
-                        <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
-                        <p class="my-abstract-content">
-                            <i>Supervisors: Anne Broadbent, Ion Nechita, Clément Pellegrini</i>.<br><br>
-    
-                            The famous $\texttt{CHSH}$ game displays strict demarcations between three canonical families of correlations known as classical $\mathcal{L}$, quantum $\mathcal{Q}$ and non-signalling $\mathcal{N\!S}$.
-                            Although Alice and Bob 
-                            cannot win more than 75% of probability in the classical case (Bell's Inequality), 
-                            they can outperform this limit as long as they are provided with quantum correlations, thereby reaching Tsirelson's Bound $\approx$ 85%.
-                            Doing even better, post-quantum strategies, formalized with <em>non-local boxes</em>, can win with up to 100% probability, yet without violating non-signalling axiom (no faster-than-light communication).<br><br>
-    
-                            Among many attempts, <em>communication complexity</em> is conjectured to provide an answer: as opposed to quantum correlations which are known to induce <em>non-trivial</em> communication complexity, some post-quantum boxes are shown to render it <em>trivial</em>. 
-                            To this day, the question is still open, and in the present report, after making a detailed historical overview, we provide a new partial answer.
-                            We propose a new approach to <em>distillation</em> with what we call the <em>algebra of boxes</em> and <em>orbit</em> of a box, which leads to disclosing new trivial areas, some numerically and others explicitly.
-                        </p>
+                        <button onclick="ShowAbstract('3')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
                     </div>
                     <a target="_blank" rel="noopener noreferrer" href="Articles/2022-06-MSc-Thesis.pdf"><button class="my-button"><i class="far fa-file-alt"></i>&nbsp;&nbsp;M2 thesis</button></a>
+
+                    <p id="3" class="my-abstract-content">
+                        <i>Supervisors: Anne Broadbent, Ion Nechita, Clément Pellegrini</i>.<br><br>
+
+                        The famous $\texttt{CHSH}$ game displays strict demarcations between three canonical families of correlations known as classical $\mathcal{L}$, quantum $\mathcal{Q}$ and non-signalling $\mathcal{N\!S}$.
+                        Although Alice and Bob 
+                        cannot win more than 75% of probability in the classical case (Bell's Inequality), 
+                        they can outperform this limit as long as they are provided with quantum correlations, thereby reaching Tsirelson's Bound $\approx$ 85%.
+                        Doing even better, post-quantum strategies, formalized with <em>non-local boxes</em>, can win with up to 100% probability, yet without violating non-signalling axiom (no faster-than-light communication).<br><br>
+
+                        Among many attempts, <em>communication complexity</em> is conjectured to provide an answer: as opposed to quantum correlations which are known to induce <em>non-trivial</em> communication complexity, some post-quantum boxes are shown to render it <em>trivial</em>. 
+                        To this day, the question is still open, and in the present report, after making a detailed historical overview, we provide a new partial answer.
+                        We propose a new approach to <em>distillation</em> with what we call the <em>algebra of boxes</em> and <em>orbit</em> of a box, which leads to disclosing new trivial areas, some numerically and others explicitly.
+                    </p>
                 <!--<details>
                     <summary>Show abstract</summary>
                     <p>
@@ -334,18 +377,19 @@ different types of noise models.
                     <i><small>Tensors in Quantum Information Theory</small></i> 
                 </li>
                 <div class="my-abstract">
-                    <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
-                    <div class="my-abstract-content">
-                        <i>Supervisor: Ion Nechita</i>.<br><br>
-
-                        Our main motivation in this report is to examine some properties of tensors: their rank, their decompositions and their norms, in a tensor space of the form $\mathbb C^{n_1}\otimes \dots \otimes \mathbb C^{n_N}$.
-                        Since tensors generalize matrices, one may wonder if some interesting matrix properties are preserved in the more general framework of tensors.<br>
-                        <br>
-                        
-                        We will see that the notions of tensor rank and of tensor norms behave as in the matrix case, but some tensor decompositions fail: e.g. there is no singular value decomposition for tensors. Eventually, we will study some applications to Quantum Information Theory, and in particular we will explore the surprising result that the <em>geometric measure of entanglement</em> is non-additive.
-                    </div>
-                </div>
+                    <button onclick="ShowAbstract('2')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
                 <a target="_blank" rel="noopener noreferrer" href="Articles/2020-09-M1-Thesis.pdf"><button class="my-button"><i class="far fa-file-alt"></i>&nbsp;&nbsp;M1 thesis</button></a>
+
+                <div id="2" class="my-abstract-content">
+                    <i>Supervisor: Ion Nechita</i>.<br><br>
+
+                    Our main motivation in this report is to examine some properties of tensors: their rank, their decompositions and their norms, in a tensor space of the form $\mathbb C^{n_1}\otimes \dots \otimes \mathbb C^{n_N}$.
+                    Since tensors generalize matrices, one may wonder if some interesting matrix properties are preserved in the more general framework of tensors.<br>
+                    <br>
+                    
+                    We will see that the notions of tensor rank and of tensor norms behave as in the matrix case, but some tensor decompositions fail: e.g. there is no singular value decomposition for tensors. Eventually, we will study some applications to Quantum Information Theory, and in particular we will explore the surprising result that the <em>geometric measure of entanglement</em> is non-additive.
+                </div>
+            </div>
                 <!--<details>
                     <summary>Show abstract</summary>
                     <p>
@@ -365,8 +409,12 @@ different types of noise models.
                     <i><small>The Dold-Thom Theorem</small></i> 
                 </li>
                 <div class="my-abstract">
-                    <button class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
-                    <p class="my-abstract-content">
+                    <button onclick="ShowAbstract('1')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
+                </div>
+                    
+                    <a target="_blank" rel="noopener noreferrer" href="Articles/2019-05-BSc-Thesis.pdf"><button class="my-button"><i class="far fa-file-alt"></i>&nbsp;&nbsp;L3 thesis</button></a>
+                
+                    <p id="1" class="my-abstract-content">
                         <i>Supervisors: Maximilien Péroux, Brooke Shipley</i>.<br><br>
 
                         The main aim of this project is to give an unusual approach of singular homology theory through algebraic topology, studying the celebrated Dold-Thom theorem which is at the junction of both:
@@ -376,9 +424,6 @@ different types of noise models.
                         After considering elementary concepts of category theory, we will study the notions of pushout and exact sequence. 
                         Then, troughout the whole report, we will introduce some fundamental tools such as suspensions, reduced cones, cofibrations or CW-complexes, which will lead us to the proof of the Dold-Thom theorem.
                     </p>
-                </div>
-                    
-                    <a target="_blank" rel="noopener noreferrer" href="Articles/2019-05-BSc-Thesis.pdf"><button class="my-button"><i class="far fa-file-alt"></i>&nbsp;&nbsp;L3 thesis</button></a>
                 <!--<details>
                     <summary>Show abstract</summary>
                     <p>

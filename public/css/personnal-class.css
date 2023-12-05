@@ -97,6 +97,7 @@ details[open] > summary {
   color: white;
   background-color: #313131;
   padding: 9px 25px;
+  border-radius: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -125,7 +126,6 @@ details[open] > summary {
   display: inline-block;
 }
 .my-abstract-content {
-  display: none;
   min-width: 40%;
   max-width: 70%;
   position: relative;
@@ -134,9 +134,10 @@ details[open] > summary {
   border-radius: 10px;
   border: none;
   padding: 4px 10px;
-  font-size: 80%
+  font-size: 80%;
+  display: none;
 }
-.my-abstract:hover .my-abstract-content{display:block}
+/*.my-abstract:hover .my-abstract-content{display:block}*/
 
 .my-icon-Google:hover{color:#4081EC;}
 .my-button-Google:hover{background-color:#4081EC;}
