@@ -2,10 +2,10 @@
 https://openclassrooms.com/en/courses/918836-concevez-votre-site-web-avec-php-et-mysql/4239271-organisez-les-pages-de-votre-site-en-blocs-fonctionnels
  -->
 
- <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+ <html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
 <head>
-    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <link href="https://gmpg.org/xfn/11" rel="profile">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -31,3 +31,4 @@ https://openclassrooms.com/en/courses/918836-concevez-votre-site-web-avec-php-et
     <meta name="twitter:description" content='I am a PhD student in Quantum Information Theory.'></meta>
 
     <script src="public/js/font.js" crossorigin="anonymous"></script>
+</head>
