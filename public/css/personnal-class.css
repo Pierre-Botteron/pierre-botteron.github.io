@@ -18,6 +18,22 @@
   margin-right: 15%;
 }
 
+.blue_box{
+  padding: 20px 20px 10px 20px;
+  border-left-width: 10px;
+  background-color: #6a9fb541;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.red_box{
+  padding: 20px 20px 10px 20px;
+  border-left-width: 10px;
+  background-color: #ac414351;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
 @media (max-width: 48em) {
   .green_box{
     margin-left: 5%;
