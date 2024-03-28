@@ -32,12 +32,22 @@
     <!-- JS -->
     <script src="public/js/font.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/996508455b.js" crossorigin="anonymous"></script>
+    <script>
+        function swipe(ImageName) {
+            var largeImage = document.getElementById('largeImage');
+            largeImage.style.display = 'block';
+            largeImage.style.width=200+"px";
+            largeImage.style.height=200+"px";
+            var url=largeImage.getAttribute('src');
+            window.open(url,'Image','width=largeImage.stylewidth,height=largeImage.style.height,resizable=1');
+        }
+    </script>
 
 </head>
 
 
 
-    <body class="theme-base-Red-Pierre">
+    <body class="theme-base-09">
 
         <div class="sidebar">
             <div class="container sidebar-sticky">
@@ -86,7 +96,7 @@
             <p>Hey there! My name is Pierre and I'm a second-year PhD student at the University of Toulouse (France) and at the University of Ottawa (Canada). My field of research is Quantum Information Theory, from a math perspective, and I work under the joint supervision of Anne Broadbent, Ion Nechita and Clément Pellegrini (see details below).
             </p>
             
-            <center><p><img src="Images/Pierre-Botteron.jpg" alt="Pierre-Botteron" width = "300"/></p></center>
+            <center><p><img src="Images/Pierre-Botteron.jpg" alt="Pierre-Botteron" width = "600" class="my-image" onclick="window.open('Images/Pierre-Botteron.jpg');"/></p></center>
             
             <p>
             Please, don't hesitate to send me a message if you have questions, thoughts, remarks or comments! ;)
@@ -96,8 +106,8 @@
 <h2 id="my-phd-subject">My PhD subject</h2>
             <p>Here are some keywords describing my subject: 
                 <ul>
-                    <li>Nonlocal games (e.g. CHSH game, graph isomorphism game),</li>
-                    <li>Nonlocal boxes, quantum correlations, post-quantum correlations (e.g. PR box),</li>
+                    <li>Nonlocal games,</li>
+                    <li>Quantum correlations, post-quantum correlations, nonlocal boxes,</li>
                     <li>Communication complexity.</li>
                 </ul>  
                 </p>
@@ -124,19 +134,19 @@
 
             <hr>
 
-            <div class="red_box">
-                <p><b style="color:#313131; font-size:120%;"><i class="fas fa-info-circle"></i>&nbsp; Contact me</b></p>
+            <div class="orange_box" onclick="javascript: window.location.href='mailto:pierre.botteron@math.univ-toulouse.fr';">
+                <p><b style="color:#FFFFFF; font-size:120%;"><i class="fas fa-info-circle"></i>&nbsp; <span style="text-decoration:underline;">Contact me</span></b></p>
                 <p></p>
 
                 <p></p>
                 <ul style="font-size:100%;">
-                    <li><strong>Name:</strong> Pierre Botteron (he/him).</li>
-                    <li><strong>E-mail address:</strong> <a href="mailto:pierre.botteron@math.univ-toulouse.fr">pierre.botteron @ math.univ-toulouse.fr</a></li>
+                    <li><strong style="color:#FFFFFF">Name:</strong> Pierre Botteron (he/him).</li>
+                    <li><strong style="color:#FFFFFF">E-mail address:</strong> <a href="mailto:pierre.botteron@math.univ-toulouse.fr" style="color:#FFFFFF">pierre.botteron @ math.univ-toulouse.fr</a></li>
                    <!-- <li><strong>Phone:</strong> ...</li>-->
-                    <li><strong>Office (IMT):</strong> 1R1 207 (2nd floor).</li>
+                    <li><strong style="color:#FFFFFF">Office (IMT):</strong> 1R1 207 (2nd floor).</li>
                     <!-- <li><strong>Office (INSA):</strong> ...</li>-->
-                    <li><strong>Office (uOttawa):</strong> STEM 636 (fall 2023).</li>
-                    <li><strong>Postal address:</strong> Institut de Mathématiques de Toulouse (IMT),<br> Université Paul Sabatier,<br> 118, Route de Narbonne,<br> 31062 Toulouse (Cedex 4), FRANCE.</li>
+                    <li><strong style="color:#FFFFFF">Office (uOttawa):</strong> STEM 636 (fall 2023).</li>
+                    <li><strong style="color:#FFFFFF">Postal address:</strong> Institut de Mathématiques de Toulouse (IMT),<br> Université Paul Sabatier,<br> 118, Route de Narbonne,<br> 31062 Toulouse (Cedex 4), FRANCE.</li>
                 </ul>
             </div>
 
@@ -149,11 +159,13 @@
             <p>
             <div style='display:flex;
             flex-wrap: wrap'>
-                <div><a href="https://www.math.univ-toulouse.fr/en/" target="_blank" rel="noopener noreferrer"><img src="Images/logo-IMT.png" alt="logo-IMT" height = "100"/></a></div>
-                <div><a href="https://iqoc.fr/" target="_blank" rel="noopener noreferrer"><img src="Images/logo-Quantum-Institute.jpeg" alt="logo-Quantum-Institute" height = "100"/></a></div>
-                <div><a href="https://www.lpt.ups-tlse.fr/?lang=en" target="_blank" rel="noopener noreferrer"><img src="Images/logo-LPT.jpeg" alt="logo-LPT" height = "100"/></a></div>
-                <div><a href="https://www.cnrs.fr/en" target="_blank" rel="noopener noreferrer"><img src="Images/logo-CNRS.png" alt="logo-CNRS" height = "100"/></a></div>
-                <div><a href="https://www.uottawa.ca/en" target="_blank" rel="noopener noreferrer"><img src="Images/logo-uOttawa.png" alt="logo-uOttawa" height = "100"/></a></div>
+                <div><a href="https://www.math.univ-toulouse.fr/en/" target="_blank" rel="noopener noreferrer"><img class="my-image" src="Images/logo-IMT.png" alt="logo-IMT" height = "100"/></a></div>
+                <div><a href="https://iqoc.fr/" target="_blank" rel="noopener noreferrer"><img class="my-image" src="Images/logo-Quantum-Institute.jpeg" alt="logo-Quantum-Institute" height = "100"/></a></div>
+                <div><a href="https://www.lpt.ups-tlse.fr/?lang=en" target="_blank" rel="noopener noreferrer"><img class="my-image" src="Images/logo-LPT.jpeg" alt="logo-LPT" height = "100"/></a></div>
+                <div><a href="https://www.cnrs.fr/en" target="_blank" rel="noopener noreferrer">
+                    <img class="my-image" src="Images/logo-CNRS.png" alt="logo-CNRS" height = "100"/></a></div>
+                <div><a href="https://www.uottawa.ca/en" target="_blank" rel="noopener noreferrer">
+                    <img class="my-image" src="Images/logo-uOttawa.png" alt="logo-uOttawa" height = "100"/></a></div>
             </div>
             </p>
             </center>

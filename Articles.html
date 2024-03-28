@@ -47,9 +47,9 @@
             } else {
                 x.style.display = "block";
             }
-            var text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all';
+            var text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all abstracts';
             if (AreAllOpen('5')) {
-                text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Collapse all';
+                text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Collapse all abstracts';
             };
             document.getElementById("open-all").innerHTML = text2;
         }
@@ -57,10 +57,10 @@
     <script>
         function OpenAll(maxValue) {
             var text1="block";
-            var text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Collapse all';
+            var text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Collapse all abstracts';
             if (AreAllOpen(maxValue)) {
                 text1="none";
-                text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all';
+                text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all abstracts';
             };
             for (let i=1; i<=maxValue; i++){
                 document.getElementById(i).style.display = text1;
@@ -138,7 +138,7 @@
         <a target="_blank" rel="noopener noreferrer" href="https://orcid.org/0000-0002-3861-0934"><i class="fa-brands fa-orcid my-icon my-icon-OrcId"></i></a> 
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/Pierre-Botteron"><i class="fab fa-github my-icon my-icon-GitHub"></i></a>
         <div class="my-abstract" style="font-size: 50%; vertical-align: text-bottom;">
-            <button id="open-all" onclick="OpenAll('5')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all</button>
+            <button id="open-all" onclick="OpenAll('5')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all abstracts</button>
         </div>
     </h1>  
     
