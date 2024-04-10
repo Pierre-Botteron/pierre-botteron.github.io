@@ -39,7 +39,7 @@
 .orange_box{
   padding: 20px 20px 10px 20px;
   border-left-width: 10px;
-  background-color:#95521ceb;
+  background-color:#d28445;
   margin-left: 15%;
   margin-right: 15%;
   border-radius: 10px;
@@ -47,7 +47,21 @@
   cursor: pointer;
 }
 .orange_box:hover{
-  background-color: #95531c;
+  background-color: #b1703a;
+}
+
+.black_box{
+  padding: 20px 20px 10px 20px;
+  border-left-width: 10px;
+  color: white;
+  background-color: #000000bb;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.black_box:hover{
+  background-color: #d28445;
 }
 
 @media (max-width: 48em) {
@@ -62,7 +76,7 @@
 }
 .my-image:hover{
   cursor: pointer;
-  filter: brightness(92%);
+  filter: brightness(87%);
 }
 
 
