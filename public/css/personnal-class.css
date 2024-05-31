@@ -78,6 +78,12 @@
   cursor: pointer;
   filter: brightness(87%);
 }
+.my-zoom{
+  filter: brightness(97%);
+}
+.my-zoom:hover{
+  cursor: zoom-in;
+}
 
 
 /* from: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details */
