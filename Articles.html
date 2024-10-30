@@ -48,7 +48,7 @@
                 x.style.display = "block";
             }
             var text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all abstracts';
-            if (AreAllOpen('6')) {
+            if (AreAllOpen('7')) {
                 text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Collapse all abstracts';
             };
             document.getElementById("open-all").innerHTML = text2;
@@ -138,7 +138,7 @@
         <a target="_blank" rel="noopener noreferrer" href="https://orcid.org/0000-0002-3861-0934"><i class="fa-brands fa-orcid my-icon my-icon-OrcId"></i></a> 
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/Pierre-Botteron"><i class="fab fa-github my-icon my-icon-GitHub"></i></a>
         <div class="my-abstract" style="font-size: 50%; vertical-align: text-bottom;">
-            <button id="open-all" onclick="OpenAll('6')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all abstracts</button>
+            <button id="open-all" onclick="OpenAll('7')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all abstracts</button>
         </div>
     </h1>  
     
@@ -151,6 +151,42 @@
         </center>
         <hr>
 
+        <h3><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/" style="color:rgb(59, 59, 59)"><i class="fa-solid fa-bookmark"></i>&nbsp;Towards Unconditional Uncloneable Encryption, <small style="font-weight: normal;">arXiv:... [quant-ph] (2024).</small></a></h3>
+        <!-- Pierre -->
+        <a href="index.html" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Pierre Botteron</span></a>, 
+        <!-- Anne -->
+        <a href="https://mysite.science.uottawa.ca/abroadbe/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Anne Broadbent</span></a>,
+        <!-- Eric -->
+        <a href="https://uwaterloo.ca/institute-for-quantum-computing/contacts/eric-culf"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Eric Culf</span></a>,
+        <!-- Ion -->
+        <a href="https://ion.nechita.net/about/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Ion Nechita</span></a>,
+        <!-- Clément -->
+        <a href="https://perso.math.univ-toulouse.fr/pellegrini/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Clément Pellegrini</span></a>,
+        <!-- Denis -->
+        <a href="https://www.denisrochette.net/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Denis Rochette</span></a>.
+    <br>
+    <div class="my-abstract">
+        <button onclick="ShowAbstract('7')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
+    </div>
+    <a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-ArXiv"><i class="far fa-bookmark"></i>&nbsp;&nbsp;ArXiv</button></a>
+    <a href="https://github.com/denis-rochette/Towards-Unconditional-Uncloneable-Encryption" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-GitHub"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub</button></a>
+    
+    <p id="7" class="my-abstract-content">
+        Uncloneable encryption is a cryptographic primitive which encrypts a classical message into a quantum ciphertext,  such that two  quantum adversaries are limited in their capacity of being able to simultaneously decrypt,  given the key and quantum side-information produced from the ciphertext.  Since its initial proposal and scheme in the random oracle model by Broadbent and Lord [TQC 2020], uncloneable encryption has developed into an important primitive at the foundation of quantum uncloneability for cryptographic primitives. Despite sustained efforts, however, the question of unconditional uncloneable encryption (and in particular of the simplest case, called an "uncloneable bit") has remained elusive. Here, we propose a candidate for the unconditional uncloneable bit problem, and provide strong evidence that the adversary's success probability in the related security game converges quadratically as $\frac{1}{2}+\frac{1}{2\sqrt{K}}$, where $K$ represents the number of  keys and $\frac{1}{2}$ is trivially achievable. We prove this bound's validity for $K$ ranging from $2$ to $7$ and  demonstrate the validity up to $K = 17$ using computations based on the NPA hierarchy. We furthemore provide compelling heuristic evidence towards the general case. In addition, we prove an asymptotic upper bound of $\frac{5}{8}$ and give a numerical upper bound of $\sim 0.5980$, which to our knowledge is the best-known value in the unconditional model.
+    </p>
+
+    <div style='display:flex;
+flex-wrap: wrap'>
+    <p><img src="Images/Articles/No-Cloning-Game/Game-textless.png" alt="Game.png" width = "330" class="my-image my-zoom" onclick="window.open('Images/Articles/No-Cloning-Game/Game.png');"/></p>
+    &nbsp;
+    <p><img src="Images/Articles/No-Cloning-Game/Conjecture-graph-textless.png" alt="Conjecture-graph.png" width = "410" class="my-image my-zoom" onclick="window.open('Images/Articles/No-Cloning-Game/Conjecture-graph.png');"/></p>
+    &nbsp;
+    <p><img src="Images/Articles/No-Cloning-Game/MoE-Game-textless.png" alt="MoE-Game.png" width = "360" class="my-image my-zoom" onclick="window.open('Images/Articles/No-Cloning-Game/MoE-Game.png');"/></p>
+    &nbsp;
+    <p><img src="Images/Articles/No-Cloning-Game/Seesaw-algo-textless.png" alt="Seesaw-algo.png" width = "380" class="my-image my-zoom" onclick="window.open('Images/Articles/No-Cloning-Game/Seesaw-algo.png');"/></p>
+    </div>
+
+    <hr>
         <h3><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2406.02199" style="color:rgb(59, 59, 59)"><i class="fa-solid fa-bookmark"></i>&nbsp;Communication Complexity of Graph Isomorphism, Coloring, and Distance Games, <small style="font-weight: normal;">arXiv:2406.02199 [quant-ph] (2024).</small></a></h3>
         <!-- Pierre -->
         <a href="index.html" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Pierre Botteron</span></a>, 
@@ -216,7 +252,7 @@ flex-wrap: wrap'>
         <!-- Ion -->
         <a href="https://ion.nechita.net/about/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Ion Nechita</span></a>,
         <!-- Clément -->
-        <a href="https://www.math.univ-toulouse.fr/~pellegri/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Clément Pellegrini</span></a>.
+        <a href="https://perso.math.univ-toulouse.fr/pellegrini/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Clément Pellegrini</span></a>.
     <br>
     <div class="my-abstract">
         <button onclick="ShowAbstract('5')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
@@ -319,7 +355,7 @@ flex-wrap: wrap'>
                         <!-- Ion -->
                         <a href="https://ion.nechita.net/about/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Ion Nechita</span></a>,
                         <!-- Clément -->
-                        <a href="https://www.math.univ-toulouse.fr/~pellegri/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Clément Pellegrini</span></a>.
+                        <a href="https://perso.math.univ-toulouse.fr/pellegrini/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Clément Pellegrini</span></a>.
                     </small>
                     <br>
                     <div class="my-abstract">
