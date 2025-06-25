@@ -69,6 +69,69 @@
         }
     </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const profiles = {
+      BOTTERON: {
+        name: "Pierre Botteron",
+        url: "https://pierre-botteron.github.io"
+      },
+      BROADBENT: {
+        name: "Anne Broadbent",
+        url: "https://www.uottawa.ca/faculty-science/professors/anne-broadbent"
+      },
+      CHHAIBI: {
+        name: "Reda Chhaibi",
+        url: "https://www.iufrance.fr/les-membres-de-liuf/membre/2545-reda-chhaibi.html"
+      },
+      CULF: {
+        name: "Eric Culf",
+        url: "https://uwaterloo.ca/institute-for-quantum-computing/contacts/eric-culf"
+      },
+      NECHITA: {
+        name: "Ion Nechita",
+        url: "https://ion.nechita.net/about/"
+      },
+      PELLEGRINI: {
+        name: "Clément Pellegrini",
+        url: "https://perso.math.univ-toulouse.fr/pellegrini/"
+      },
+      PEROUX: {
+        name: "Maximilien Péroux",
+        url: "https://www.maximilienperoux.com/"
+      },
+      PROULX: {
+        name: "Marc-Olivier Proulx",
+        url: "https://inspirehep.net/authors/2628748"
+      },
+      ROCHETTE: {
+        name: "Denis Rochette",
+        url: "https://www.denisrochette.net/"
+      },
+      SHIPLEY: {
+        name: "Brooke Shipley",
+        url: "https://mscs.uic.edu/profiles/shipleyb/"
+      },
+      WEBER: {
+        name: "Moritz Weber",
+        url: "https://www.math.uni-sb.de/ag/speicher/weber_publikationenE.html"
+      },
+    };
+
+    Object.keys(profiles).forEach(key => {
+      document.querySelectorAll(`.${key}`).forEach(el => {
+        const profile = profiles[key];
+        const a = document.createElement("a");
+        a.href = profile.url;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.innerHTML = `<span class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;${profile.name}</span>`;
+        el.replaceWith(a);
+      });
+    });
+  });
+</script>
+
     <script>
         MathJax = {
           tex: {
@@ -141,9 +204,7 @@
             <button id="open-all" onclick="OpenAll('7')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all abstracts</button>
         </div>
     </h1>  
-    
-    
-    
+
     
         <hr>
         <center>
@@ -152,18 +213,12 @@
         <hr>
 
         <h3><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2410.23064" style="color:rgb(59, 59, 59)"><i class="fa-solid fa-bookmark"></i>&nbsp;Towards Unconditional Uncloneable Encryption, <small style="font-weight: normal;">arXiv:2410.23064 [quant-ph] (2024).</small></a></h3>
-        <!-- Pierre -->
-        <a href="index.html" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Pierre Botteron</span></a>, 
-        <!-- Anne -->
-        <a href="https://mysite.science.uottawa.ca/abroadbe/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Anne Broadbent</span></a>,
-        <!-- Eric -->
-        <a href="https://uwaterloo.ca/institute-for-quantum-computing/contacts/eric-culf"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Eric Culf</span></a>,
-        <!-- Ion -->
-        <a href="https://ion.nechita.net/about/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Ion Nechita</span></a>,
-        <!-- Clément -->
-        <a href="https://perso.math.univ-toulouse.fr/pellegrini/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Clément Pellegrini</span></a>,
-        <!-- Denis -->
-        <a href="https://www.denisrochette.net/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Denis Rochette</span></a>.
+        <span class="BOTTERON"></span>, 
+        <span class="BROADBENT"></span>, 
+        <span class="CULF"></span>, 
+        <span class="NECHITA"></span>, 
+        <span class="PELLEGRINI"></span>, 
+        <span class="ROCHETTE"></span>.
     <br>
     <div class="my-abstract">
         <button onclick="ShowAbstract('7')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
@@ -171,7 +226,7 @@
     <a href="https://arxiv.org/abs/2410.23064" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-ArXiv"><i class="far fa-bookmark"></i>&nbsp;&nbsp;ArXiv</button></a>
     <a href="https://github.com/denis-rochette/Towards-Unconditional-Uncloneable-Encryption" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-GitHub"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub</button></a>
     <a href="Slideshows-and-posters/2025-02-QIP.pdf" target="_blank" rel="noopener noreferrer"><button class="my-button"><i class="far fa-sticky-note"></i>&nbsp;&nbsp;Poster</button></a>
-    <a href="Slideshows-and-posters/2025-05-INTRIQ-Bromont.pdf" target="_blank" rel="noopener noreferrer"><button class="my-button"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;&nbsp;Slideshow</button></a>
+    <a href="Slideshows-and-posters/2025-06-Lyon.pdf" target="_blank" rel="noopener noreferrer"><button class="my-button"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;&nbsp;Slideshow</button></a>
     
     <p id="7" class="my-abstract-content">
         Uncloneable encryption is a cryptographic primitive which encrypts a classical message into a quantum ciphertext,  such that two  quantum adversaries are limited in their capacity of being able to simultaneously decrypt,  given the key and quantum side-information produced from the ciphertext.  Since its initial proposal and scheme in the random oracle model by Broadbent and Lord [TQC 2020], uncloneable encryption has developed into an important primitive at the foundation of quantum uncloneability for cryptographic primitives. Despite sustained efforts, however, the question of unconditional uncloneable encryption (and in particular of the simplest case, called an "uncloneable bit") has remained elusive. Here, we propose a candidate for the unconditional uncloneable bit problem, and provide strong evidence that the adversary's success probability in the related security game converges quadratically as $\frac{1}{2}+\frac{1}{2\sqrt{K}}$, where $K$ represents the number of  keys and $\frac{1}{2}$ is trivially achievable. We prove this bound's validity for $K$ ranging from $2$ to $7$ and  demonstrate the validity up to $K = 17$ using computations based on the NPA hierarchy. We furthemore provide compelling heuristic evidence towards the general case. In addition, we prove an asymptotic upper bound of $\frac{5}{8}$ and give a numerical upper bound of $\sim 0.5980$, which to our knowledge is the best-known value in the unconditional model.
@@ -190,10 +245,8 @@ flex-wrap: wrap'>
 
     <hr>
         <h3><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2406.02199" style="color:rgb(59, 59, 59)"><i class="fa-solid fa-bookmark"></i>&nbsp;Communication Complexity of Graph Isomorphism, Coloring, and Distance Games, <small style="font-weight: normal;">arXiv:2406.02199 [quant-ph] (2024).</small></a></h3>
-        <!-- Pierre -->
-        <a href="index.html" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Pierre Botteron</span></a>, 
-        <!-- Moritz -->
-        <a href="https://www.math.uni-sb.de/ag/speicher/weber_publikationenE.html"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Moritz Weber</span></a>.
+        <span class="BOTTERON"></span>,
+        <span class="WEBER"></span>.
     <br>
     <div class="my-abstract">
         <button onclick="ShowAbstract('6')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
@@ -245,16 +298,11 @@ HIGHLIGHTS:<br>
 
     <hr>
     <h3><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.22331/q-2024-07-10-1402" style="color:rgb(59, 59, 59)"><i class="fa-regular fa-newspaper"></i>&nbsp;Algebra of Nonlocal Boxes and the Collapse of Communication Complexity, <small style="font-weight: normal;">Quantum 8, 1402 (2024).</small></a></h3>
-        <!-- Pierre -->
-        <a href="index.html" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Pierre Botteron</span></a>, 
-        <!-- Anne -->
-        <a href="https://mysite.science.uottawa.ca/abroadbe/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Anne Broadbent</span></a>,
-        <!-- Reda -->
-        <a href="https://www.math.univ-toulouse.fr/~rchhaibi/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Reda Chhaibi</span></a>,
-        <!-- Ion -->
-        <a href="https://ion.nechita.net/about/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Ion Nechita</span></a>,
-        <!-- Clément -->
-        <a href="https://perso.math.univ-toulouse.fr/pellegrini/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Clément Pellegrini</span></a>.
+        <span class="BOTTERON"></span>, 
+        <span class="BROADBENT"></span>,
+        <span class="CHHAIBI"></span>,
+        <span class="NECHITA"></span>,
+        <span class="PELLEGRINI"></span>.
     <br>
     <div class="my-abstract">
         <button onclick="ShowAbstract('5')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
@@ -293,12 +341,9 @@ flex-wrap: wrap'>
 
     <hr>
     <h3><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1103/PhysRevLett.132.070201" style="color:rgb(59, 59, 59)"><i class="fa-regular fa-newspaper"></i>&nbsp;Extending the Known Region of Nonlocal Boxes that Collapse Communication Complexity, <small style="font-weight: normal;">Physical Review Letters, <b>132</b>, 070201 (2024).</small></a></h3>
-        <!-- Pierre -->
-        <a href="index.html" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Pierre Botteron</span></a>, 
-        <!-- Anne -->
-        <a href="https://mysite.science.uottawa.ca/abroadbe/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Anne Broadbent</span></a>,
-        <!-- Marc-Olivier -->
-        <span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Marc-Olivier Proulx</span>.
+        <span class="BOTTERON"></span>, 
+        <span class="BROADBENT"></span>,
+        <span class="PROULX"></span>.
     <br>
     <div class="my-abstract">
         <button onclick="ShowAbstract('4')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
@@ -352,12 +397,9 @@ flex-wrap: wrap'>
                         <!-- Pierre
                         <a href="index.html" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Pierre Botteron</span></a>. -->
                         Supervisors: 
-                        <!-- Anne -->
-                        <a href="https://mysite.science.uottawa.ca/abroadbe/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Anne Broadbent</span></a>,
-                        <!-- Ion -->
-                        <a href="https://ion.nechita.net/about/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Ion Nechita</span></a>,
-                        <!-- Clément -->
-                        <a href="https://perso.math.univ-toulouse.fr/pellegrini/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Clément Pellegrini</span></a>.
+                        <span class="BROADBENT"></span>, 
+                        <span class="NECHITA"></span>, 
+                        <span class="PELLEGRINI"></span>.
                     </small>
                     <br>
                     <div class="my-abstract">
@@ -402,8 +444,7 @@ flex-wrap: wrap'>
                         <!-- Pierre
                         <a href="index.html" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Pierre Botteron</span></a>. -->
                         Supervisor: 
-                        <!-- Ion -->
-                        <a href="https://ion.nechita.net/about/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Ion Nechita</span></a>.
+                        <span class="NECHITA"></span>. 
                     </small>
                     <br>
                 <div class="my-abstract">
@@ -441,10 +482,8 @@ flex-wrap: wrap'>
                         <!-- Pierre
                         <a href="index.html" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Pierre Botteron</span></a>. -->
                         Supervisors: 
-                        <!-- Maximilien -->
-                        <a href="https://www.maximilienperoux.com/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Maximilien Péroux</span></a>,
-                        <!-- Maximilien -->
-                        <a href="https://mscs.uic.edu/profiles/shipleyb/"  target="_blank" rel="noopener noreferrer"><span  class="my-profile"><i class="fa-regular fa-user"></i>&nbsp;Brooke Shipley</span></a>.
+                        <span class="PEROUX"></span>, 
+                        <span class="SHIPLEY"></span>.
                     </small>
                     <br>
                 <div class="my-abstract">
