@@ -28,7 +28,7 @@ https://openclassrooms.com/en/courses/918836-concevez-votre-site-web-avec-php-et
     <meta name="twitter:title" content="Pierre's webpage"></meta>
     <meta name="twitter:image" content="Images/PR-box-large.png"></meta>
     <meta name="twitter:image:src" content="Images/PR-box-large.png"></meta>
-    <meta name="twitter:description" content='I am a PhD student in Quantum Information Theory.'></meta>
+    <meta name="twitter:description" content='I am a postdoc in Quantum Information Theory.'></meta>
 
     <script src="public/js/font.js" crossorigin="anonymous"></script>
 </head>
