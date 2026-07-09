@@ -32,14 +32,19 @@
     <script src="public/js/font.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/996508455b.js" crossorigin="anonymous"></script>
     <script>
-        function AreAllOpen(maxValue) {
-            for (let i=1; i<=maxValue; i++) {
+        function nb_papers()
+        {
+            return '8';
+        }
+    </script>
+    <script>
+        function AreAllOpen() {
+            for (let i=1; i<=nb_papers(); i++) {
                 if (document.getElementById(i).style.display != "block") {return false;}
             }
             return true;
         }
-    </script>
-    <script>
+        
         function ShowAbstract(text) {
             var x = document.getElementById(text);
             if (x.style.display === "block"){
@@ -47,25 +52,38 @@
             } else {
                 x.style.display = "block";
             }
-            var text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all abstracts';
-            if (AreAllOpen('7')) {
-                text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Collapse all abstracts';
+            var text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Show all abstracts';
+            if (AreAllOpen()) {
+                text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Hide all abstracts';
             };
             document.getElementById("open-all").innerHTML = text2;
         }
+        
+        function OpenAll() {
+            var style="block";
+            var button_text='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Hide all abstracts';
+            if (AreAllOpen()) {
+                style="none";
+                button_text='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Show all abstracts';
+            };
+            for (let i=1; i<=nb_papers(); i++){
+                document.getElementById(i).style.display = style;
+            };
+            document.getElementById("open-all").innerHTML = button_text;
+        }
     </script>
     <script>
-        function OpenAll(maxValue) {
-            var text1="block";
-            var text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Collapse all abstracts';
-            if (AreAllOpen(maxValue)) {
-                text1="none";
-                text2='<i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all abstracts';
+        function Hide_images() {
+            var style = "none";
+            var button_text = "<i class='fa-solid fa-image'></i>&nbsp;&nbsp;Show images";
+            if ( document.getElementById("image-1").style.display == style) {
+                style = "flex";
+                button_text = "<i class='fa-solid fa-image'></i>&nbsp;&nbsp;Hide images";
             };
-            for (let i=1; i<=maxValue; i++){
-                document.getElementById(i).style.display = text1;
+            for (let i=1; i<=nb_papers(); i++){
+                document.getElementById("image-"+i).style.display = style;
             };
-            document.getElementById("open-all").innerHTML = text2;
+            document.getElementById("hide-images").innerHTML = button_text;
         }
     </script>
 
@@ -200,11 +218,18 @@
         <a target="_blank" rel="noopener noreferrer" href="https://orcid.org/0000-0002-3861-0934"><i class="fa-brands fa-orcid my-icon my-icon-OrcId"></i></a> 
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/Pierre-Botteron"><i class="fab fa-github my-icon my-icon-GitHub"></i></a>
         <div class="my-abstract" style="font-size: 50%; vertical-align: text-bottom;">
-            <button id="open-all" onclick="OpenAll('8')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Open all abstracts</button>
+            <button id="hide-images" onclick="Hide_images()" class="my-button">
+                <i class="fa-solid fa-image"></i>&nbsp;&nbsp;Hide images
+            </button>
+        </div>
+        <div class="my-abstract" style="font-size: 50%; vertical-align: text-bottom;">
+            <button id="open-all" onclick="OpenAll()" class="my-button my-button-abstract">
+                <i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Show all abstracts
+            </button>
         </div>
     </h1>  
 
-    
+
         <hr>
         <center>
         <h2 id="Pre-prints">PRE-PRINTS</h2>
@@ -213,9 +238,6 @@
 
         
         <h3><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2406.02199" style="color:rgb(59, 59, 59)"><i class="fa-solid fa-bookmark"></i>&nbsp;Communication Complexity of Graph Isomorphism, Coloring, and Distance Games, <small style="font-weight: normal;">arXiv:2406.02199 [quant-ph] (2024).</small></a></h3>
-        <span class="BOTTERON"></span>,
-        <span class="WEBER"></span>.
-    <br>
     <div class="my-abstract">
         <button onclick="ShowAbstract('6')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
     </div>
@@ -223,7 +245,9 @@
     <a href="Images/Graph-Isom-Graphical-Abstract.pdf" target="_blank" rel="noopener noreferrer"><button class="my-button"><i class="fa-solid fa-palette"></i>&nbsp;&nbsp;Graphical Abstract</button></a>
     <a href="Slideshows-and-posters/2026-01-QIP.pdf" target="_blank" rel="noopener noreferrer"><button class="my-button"><i class="far fa-sticky-note"></i>&nbsp;&nbsp;Poster</button></a>
     <a href="Slideshows-and-posters/2025-02-Bordeaux.pdf" target="_blank" rel="noopener noreferrer"><button class="my-button"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;&nbsp;Slideshow</button></a>
-    
+    <br>
+        <span class="BOTTERON"></span>,
+        <span class="WEBER"></span>
     <p id="6" class="my-abstract-content">
         In quantum information,
 nonlocal games are particularly useful for differentiating classical, quantum, and non-signalling correlations.
@@ -248,7 +272,7 @@ HIGHLIGHTS:<br>
 &nbsp;&nbsp;&nbsp;5. Non-signalling strategies are finer than quantum ones in the vertex distance game.<br>
     </p>
 
-    <div style='display:flex;flex-wrap: wrap'>
+    <div id="image-6" style='display:flex;flex-wrap: wrap'>
     <iframe width="750" height="460" src="https://www.youtube.com/embed/HWwcR2AO1e4" frameborder="0" allowfullscreen></iframe>
     <p><img src="Images/Articles/Graph-Games/PR-from-Graph-Isomorphism-Game-textless.png" alt="PR-from-Graph-Isomorphism-Game.png" width = "370" class="my-image my-zoom" onclick="window.open('Images/Articles/Graph-Games/PR-from-Graph-Isomorphism-Game.png');"/></p>
     &nbsp;
@@ -268,13 +292,6 @@ HIGHLIGHTS:<br>
     <hr>
 
     <h3><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.22331/q-2026-07-08-2157" style="color:rgb(59, 59, 59)"><i class="fa-regular fa-newspaper"></i>&nbsp;Towards Unconditional Uncloneable Encryption, <small style="font-weight: normal;"> Quantum 10, 2157 (2026).</small></a></h3>
-        <span class="BOTTERON"></span>, 
-        <span class="BROADBENT"></span>, 
-        <span class="CULF"></span>, 
-        <span class="NECHITA"></span>, 
-        <span class="PELLEGRINI"></span>, 
-        <span class="ROCHETTE"></span>.
-    <br>
     <div class="my-abstract">
         <button onclick="ShowAbstract('7')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
     </div>
@@ -283,13 +300,19 @@ HIGHLIGHTS:<br>
     <a href="https://github.com/denis-rochette/Towards-Unconditional-Uncloneable-Encryption" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-GitHub"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub</button></a>
     <a href="Slideshows-and-posters/2025-02-QIP.pdf" target="_blank" rel="noopener noreferrer"><button class="my-button"><i class="far fa-sticky-note"></i>&nbsp;&nbsp;Poster</button></a>
     <a href="Slideshows-and-posters/2025-06-Lyon.pdf" target="_blank" rel="noopener noreferrer"><button class="my-button"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;&nbsp;Slideshow</button></a>
-    
+    <br>
+        <span class="BOTTERON"></span>, 
+        <span class="BROADBENT"></span>, 
+        <span class="CULF"></span>, 
+        <span class="NECHITA"></span>, 
+        <span class="PELLEGRINI"></span>, 
+        <span class="ROCHETTE"></span>
+
     <p id="7" class="my-abstract-content">
         Uncloneable encryption is a cryptographic primitive which encrypts a classical message into a quantum ciphertext,  such that two  quantum adversaries are limited in their capacity of being able to simultaneously decrypt,  given the key and quantum side-information produced from the ciphertext.  Since its initial proposal and scheme in the random oracle model by Broadbent and Lord [TQC 2020], uncloneable encryption has developed into an important primitive at the foundation of quantum uncloneability for cryptographic primitives. Despite sustained efforts, however, the question of unconditional uncloneable encryption (and in particular of the simplest case, called an "uncloneable bit") has remained elusive. Here, we propose a candidate for the unconditional uncloneable bit problem, and provide strong evidence that the adversary's success probability in the related security game converges quadratically as $\frac{1}{2}+\frac{1}{2\sqrt{K}}$, where $K$ represents the number of  keys and $\frac{1}{2}$ is trivially achievable. We prove this bound's validity for $K$ ranging from $2$ to $7$ and  demonstrate the validity up to $K = 17$ using computations based on the NPA hierarchy. We furthemore provide compelling heuristic evidence towards the general case. In addition, we prove an asymptotic upper bound of $\frac{5}{8}$ and give a numerical upper bound of $\sim 0.5980$, which to our knowledge is the best-known value in the unconditional model.
     </p>
 
-    <div style='display:flex;
-flex-wrap: wrap'>
+    <div id="image-7" style='display:flex;flex-wrap: wrap'>
     <p><img src="Images/Articles/No-Cloning-Game/Game-textless.png" alt="Game.png" width = "330" class="my-image my-zoom" onclick="window.open('Images/Articles/No-Cloning-Game/Game.png');"/></p>
     &nbsp;
     <p><img src="Images/Articles/No-Cloning-Game/Conjecture-graph-textless.png" alt="Conjecture-graph.png" width = "410" class="my-image my-zoom" onclick="window.open('Images/Articles/No-Cloning-Game/Conjecture-graph.png');"/></p>
@@ -303,12 +326,6 @@ flex-wrap: wrap'>
 
 
     <h3><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.22331/q-2024-07-10-1402" style="color:rgb(59, 59, 59)"><i class="fa-regular fa-newspaper"></i>&nbsp;Algebra of Nonlocal Boxes and the Collapse of Communication Complexity, <small style="font-weight: normal;">Quantum 8, 1402 (2024).</small></a></h3>
-        <span class="BOTTERON"></span>, 
-        <span class="BROADBENT"></span>,
-        <span class="CHHAIBI"></span>,
-        <span class="NECHITA"></span>,
-        <span class="PELLEGRINI"></span>.
-    <br>
     <div class="my-abstract">
         <button onclick="ShowAbstract('5')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
     </div>
@@ -316,6 +333,12 @@ flex-wrap: wrap'>
     <a href="https://arxiv.org/abs/2312.00725" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-ArXiv"><i class="far fa-bookmark"></i>&nbsp;&nbsp;ArXiv</button></a>
     <a href="https://github.com/Pierre-Botteron/Algebra-of-Boxes-code" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-GitHub"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub</button></a>
     <a href="Slideshows-and-posters/2024-06-CEQIP.pdf" target="_blank" rel="noopener noreferrer"><button class="my-button"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;&nbsp;Slideshow</button></a>
+    <br>
+        <span class="BOTTERON"></span>, 
+        <span class="BROADBENT"></span>,
+        <span class="CHHAIBI"></span>,
+        <span class="NECHITA"></span>,
+        <span class="PELLEGRINI"></span>
     <p id="5" class="my-abstract-content">
         Communication complexity quantifies how difficult it is for two distant computers to evaluate a function $f(X,Y)$, where the strings $X$ and $Y$ are distributed to the first and second computer respectively,  under the constraint of exchanging as few bits as possible.
         Surprisingly, some nonlocal boxes, which are resources shared by the two computers, are so powerful that they allow to <i>collapse</i> communication complexity, in the sense that
@@ -328,8 +351,7 @@ flex-wrap: wrap'>
         This gives rise to the notion of the "orbit of a box", unveiling surprising geometrical properties about the alignment and parallelism of distilled boxes.
         The power of this new framework is that it allows us to prove previously-reported numerical observations concerning the best way to wire consecutive boxes, and to numerically and analytically recover recently-identified noisy $\mathtt{PR}$ boxes that collapse communication complexity for different types of noise models.
     </p>
-    <div style='display:flex;
-flex-wrap: wrap'>
+    <div id="image-5" style='display:flex;flex-wrap: wrap'>
     <!-- <p><img src="Images/Articles/Algebra-of-Boxes/Example-of-Wiring.png" alt="Example-of-Wiring.png" height = "120" class="my-image my-zoom" onclick="window.open('Images/Articles/Algebra-of-Boxes/Example-of-Wiring.png');"/></p>
     &nbsp; -->
     <p><img src="Images/Articles/Algebra-of-Boxes/Example-of-Wiring-2-textless.png" alt="Example-of-Wiring-2.png" width = "210" class="my-image my-zoom" onclick="window.open('Images/Articles/Algebra-of-Boxes/Example-of-Wiring-2.png');"/></p>
@@ -346,10 +368,6 @@ flex-wrap: wrap'>
 
     <hr>
     <h3><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1103/PhysRevLett.132.070201" style="color:rgb(59, 59, 59)"><i class="fa-regular fa-newspaper"></i>&nbsp;Extending the Known Region of Nonlocal Boxes that Collapse Communication Complexity, <small style="font-weight: normal;">Physical Review Letters, <b>132</b>, 070201 (2024).</small></a></h3>
-        <span class="BOTTERON"></span>, 
-        <span class="BROADBENT"></span>,
-        <span class="PROULX"></span>.
-    <br>
     <div class="my-abstract">
         <button onclick="ShowAbstract('4')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
     </div>
@@ -357,6 +375,10 @@ flex-wrap: wrap'>
     <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2302.00488"><button class="my-button my-button-ArXiv"><i class="far fa-bookmark"></i>&nbsp;&nbsp;ArXiv</button></a>
     <a href="Slideshows-and-posters/2023-03-Ellipse-result.pdf" target="_blank" rel="noopener noreferrer"><button class="my-button"><i class="far fa-sticky-note"></i>&nbsp;&nbsp;Poster</button></a>
     <a href="Slideshows-and-posters/2024-06-FOXCONN-Taiwan.pdf" target="_blank" rel="noopener noreferrer"><button class="my-button"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;&nbsp;Slideshow</button></a>
+    <br>
+        <span class="BOTTERON"></span>, 
+        <span class="BROADBENT"></span>,
+        <span class="PROULX"></span>
     <p id="4" class="my-abstract-content">
         Non-signalling boxes ($\mathcal{N\!S}$) are theoretical resources
         defined by the principle of no-faster-than-light communication. They generalize quantum correlations, and some of them are known to collapse communication complexity ($\mathcal{CC}$).
@@ -374,7 +396,7 @@ flex-wrap: wrap'>
     In the present letter, we find a better sufficient condition for a nonlocal box to collapse $\mathcal{CC}$, thus extending the known collapsing region. In some slices of $\mathcal{N\!S}$, we show this condition coincides with an area outside of an ellipse.</p>
 </details>-->
     <!-- <details><summary>BibTex</summary>Test</details> -->
-    <div style='display:flex;flex-wrap: wrap'>
+    <div id="image-4" style='display:flex;flex-wrap: wrap'>
     <iframe width="750" height="460" src="https://www.youtube.com/embed/h8MPbn58x2Q" frameborder="0" allowfullscreen></iframe>
     <p><img src="Images/Articles/Collapsing-Ellipse/Historical-Overview.png" alt="Historical-Overview.png" width = "750" class="my-image my-zoom" onclick="window.open('Images/Articles/Collapsing-Ellipse/Historical-Overview.png');"/></p>
     &nbsp;
@@ -419,6 +441,7 @@ flex-wrap: wrap'>
 
                         Second, we address a key open problem in cryptography: the feasibility of unclonable encryption. We aim to construct an encryption scheme that prevents two distant parties from simultaneously obtaining information about a shared encrypted message. We introduce a candidate for unclonable encryption in the plain model, <em>i.e.</em> without assumptions, in working towards an unconditional proof. Our protocol is based on Clifford algebra, utilizing complex Hermitian unitary matrices that anti-commute. For small key sizes, we rigorously prove security using sum-of-squares methods, while for larger key sizes, we provide strong numerical evidence via the NPA hierarchy.
                     </p>
+                    <div id="image-8"></div>
                 </li>
 
                 <li> [<small>2022</small>] 
@@ -450,6 +473,7 @@ flex-wrap: wrap'>
                         To this day, the question is still open, and in the present report, after making a detailed historical overview, we provide a new partial answer.
                         We propose a new approach to <em>distillation</em> with what we call the <em>algebra of boxes</em> and <em>orbit</em> of a box, which leads to disclosing new trivial areas, some numerically and others explicitly.
                     </p>
+                    <div id="image-3"></div>
                 <!--<details>
                     <summary>Show abstract</summary>
                     <p>
@@ -491,6 +515,7 @@ flex-wrap: wrap'>
                     
                     We will see that the notions of tensor rank and of tensor norms behave as in the matrix case, but some tensor decompositions fail: e.g. there is no singular value decomposition for tensors. Eventually, we will study some applications to Quantum Information Theory, and in particular we will explore the surprising result that the <em>geometric measure of entanglement</em> is non-additive.
                 </div>
+                <div id="image-2"></div>
             </div>
                 <!--<details>
                     <summary>Show abstract</summary>
@@ -533,6 +558,7 @@ flex-wrap: wrap'>
                         After considering elementary concepts of category theory, we will study the notions of pushout and exact sequence. 
                         Then, troughout the whole report, we will introduce some fundamental tools such as suspensions, reduced cones, cofibrations or CW-complexes, which will lead us to the proof of the Dold-Thom theorem.
                     </p>
+                    <div id="image-1"></div>
                 <!--<details>
                     <summary>Show abstract</summary>
                     <p>
