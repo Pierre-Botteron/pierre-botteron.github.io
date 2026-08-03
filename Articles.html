@@ -34,7 +34,7 @@
     <script>
         function nb_papers()
         {
-            return '8';
+            return '9';
         }
     </script>
     <script>
@@ -105,6 +105,14 @@
       CULF: {
         name: "Eric Culf",
         url: "https://uwaterloo.ca/institute-for-quantum-computing/contacts/eric-culf"
+      },
+      DESIGNOLLE: {
+        name: "Sébastien Designolle",
+        url: "https://sebastiendesignolle.github.io/"
+      },
+      FAWZI: {
+        name: "Omar Fawzi",
+        url: "https://perso.ens-lyon.fr/omar.fawzi/"
       },
       NECHITA: {
         name: "Ion Nechita",
@@ -230,10 +238,49 @@
     </h1>  
 
 
+
         <hr>
         <center>
         <h2 id="Pre-prints">PRE-PRINTS</h2>
         </center>
+        <hr>
+
+        <h3><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2607.28602" style="color:rgb(59, 59, 59)"><i class="fa-solid fa-bookmark"></i>&nbsp;Pauli Encodings & Unclonable Encryption, <small style="font-weight: normal;">arXiv:2607.28602 [quant-ph] (2026).</small></a></h3>
+    <div class="my-abstract">
+        <button onclick="ShowAbstract('9')" class="my-button my-button-abstract"><i class="fa-solid fa-circle-info"></i></button>
+    </div>
+    <a href="https://arxiv.org/abs/2607.28602" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-ArXiv"><i class="far fa-bookmark"></i>&nbsp;&nbsp;ArXiv</button></a>
+    <a href="https://github.com/sebastiendesignolle/arXiv-2607.28602" target="_blank" rel="noopener noreferrer"><button class="my-button my-button-GitHub"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub</button></a>
+    <br>
+        <span class="BOTTERON"></span>,
+        <span class="DESIGNOLLE"></span>,
+        <span class="FAWZI"></span>
+    <p id="9" class="my-abstract-content">
+        The unclonable bit question asks whether quantum encryption can prevent an adversary from producing two systems that both reveal the plaintext once the key is disclosed. 
+        
+        <br><br>
+        We introduce and study Pauli Encodings, a simple class of one-bit encryption schemes whose ciphertexts are normalized eigenspace projectors of Pauli strings. 
+        
+        <br><br>
+        For every Pauli Encoding with $K$ Pauli strings, we prove a universal lower bound $1/2+1/(2\sqrt{K})$ on the optimal monogamy-of-entanglement winning probability, together with sharper bounds for several structured families. 
+        
+        <br><br>
+        We then establish two limitations of natural approaches to unclonable security. First, if the Pauli strings are restricted to strings of $X$ and $Z$ of length $n$, the encoding is not secure. Second, we identify a universal $3/4$ obstruction showing that arguments based only on pairwise guessing marginals cannot establish unclonable-indistinguishable security. 
+        
+        <br><br>
+        When the Pauli strings all pairwise anticommute, the protocol becomes the one studied in <a target="_blank" rel="noopener noreferrer" href="https://quantum-journal.org/papers/q-2026-07-08-2157/">[Quantum 10, 2157 (2026)]</a>. We exploit the symmetry of this protocol to solve the third level of the natural semidefinite programming relaxation obtaining an asymptotic upper bound of approximately $0.5556$ on the winning probability. 
+        
+        <br><br>
+        Finally, we prove strong unclonable-indistinguishable security against bounded-local-dimension adversaries and strong indistinguishability security for several efficient Pauli families. 
+        
+        <br><br>
+        First-level NPA computations provide additional numerical evidence towards the strong unclonable-indistinguishable security.
+    </p>
+
+    <div id="image-9" style='display:flex;flex-wrap: wrap'>
+    </div>
+
+
         <hr>
 
         
@@ -587,5 +634,9 @@ HIGHLIGHTS:<br>
         </div>
 
     </body>
+
+    <script>
+        Hide_images();
+    </script>
 
 </html>
