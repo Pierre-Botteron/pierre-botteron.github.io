@@ -86,14 +86,14 @@
 }
 .sidebar-nav-item {
   display: block;
-  line-height: 1.75;
+  line-height: 1.1;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline dotted;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
 }
 .sidebar-nav-item.active {
   font-weight: bold;
@@ -135,6 +135,46 @@ a.sidebar-nav2-item:focus {
 }
 a.sidebar-nav2-active-item:hover,
 a.sidebar-nav2-active-item:focus {
+  text-decoration: underline dotted;
+  font-size: 1.05rem;
+}
+
+/* Sidebar nav3 */
+.sidebar-nav3 {
+  margin-bottom: 1rem;
+}
+.sidebar-nav3-item {
+  display: block;
+  line-height: 1.75;
+  font-size: 0.9rem;
+  color:rgba(255, 255, 255, 0.772);
+  /* margin-left: 1rem;
+  margin-right: 1rem; */
+}
+a.sidebar-nav3-item:hover,
+a.sidebar-nav3-item:focus {
+  text-decoration: underline dotted;
+  font-size: 1.05rem;
+}
+.sidebar-nav3-item.active {
+  font-weight: bold;
+}
+
+/* Sidebar nav3-active */
+.sidebar-nav3-active {
+  margin-bottom: 1rem;
+}
+.sidebar-nav3-active-item {
+  display: block;
+  line-height: 1.75;
+  font-size: 0.9rem;
+  color:#ffffffec;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+a.sidebar-nav3-active-item:hover,
+a.sidebar-nav3-active-item:focus {
   text-decoration: underline dotted;
   font-size: 1.05rem;
 }
@@ -314,8 +354,12 @@ a.sidebar-nav2-active-item:focus {
 }
 .theme-base-Teal-Pierre .content a,
 .theme-base-Teal-Pierre .related-posts li a:hover {
-  color: #028c75;
+  color: #088f78;
 }
+
+.theme-base-Teal-Pierre .my-button-abstract{background-color: #03856fbb;}
+.theme-base-Teal-Pierre .my-button-abstract:hover{background-color: #07a88dbb;}
+.theme-base-Teal-Pierre .my-abstract-content{background-color: #03856f24;}
 
 /* Red-Pierre */
 .theme-base-Red-Pierre .sidebar {

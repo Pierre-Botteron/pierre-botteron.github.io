@@ -50,6 +50,20 @@
   background-color: #b1703a;
 }
 
+.teal_box{
+  padding: 20px 20px 10px 20px;
+  border-left-width: 10px;
+  background-color:#03836dbb;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 10px;
+  color:#f4f4f4;
+  cursor: pointer;
+}
+.teal_box:hover{
+  background-color: #04957dbb;
+}
+
 .black_box{
   padding: 20px 20px 10px 20px;
   border-left-width: 10px;
@@ -216,10 +230,12 @@ details[open] > summary {
 
 .my-button-home{padding: 11px 25px;}
 /* .my-button-home:hover{background-color: #017663;} */
-.my-button-home:hover{background-color: #d28445;}
+/* .my-button-home:hover{background-color: #d28445;} */
+.my-button-home:hover{background-color: #04957dbb;}
 
 .my-button-research{padding: 13px 25px;}
-.my-button-research:hover{background-color: #6393a8;}
+/* .my-button-research:hover{background-color: #6393a8;} */
+.my-button-research:hover{background-color: #04957dbb;}
 
 
 .button1 {background-color: #04AA6D;} /* Green */
@@ -227,7 +243,7 @@ details[open] > summary {
 .button3 {background-color: black;} /* Black */
 
 .my-profile{color:#313131;
-  background-color: #f2f2f2e0; /* #f2f2f2 */
+  background-color: #f2f2f2e0;
   border-radius: 10px;
   border: none;
   padding: 1px 7px;
