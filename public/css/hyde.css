@@ -361,6 +361,9 @@ a.sidebar-nav3-active-item:focus {
 .theme-base-Teal-Pierre .my-button-abstract:hover{background-color: #07a88dbb;}
 .theme-base-Teal-Pierre .my-abstract-content{background-color: #03856f24;}
 
+.theme-base-Teal-Pierre .my-button-filter{background-color: #07a88d3e;}
+.theme-base-Teal-Pierre .my-button-filter:hover{background-color: #07a88d6b;}
+
 /* Red-Pierre */
 .theme-base-Red-Pierre .sidebar {
   background-color: #ac4143f4;

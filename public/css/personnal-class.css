@@ -182,7 +182,6 @@ details[open] > summary {
   /*transition-duration: 0.4s;*/
 }
 .my-button:hover{
-  font-weight: bold;
   background-color: #00000090; /* #545454 */
 }
 
@@ -212,6 +211,15 @@ details[open] > summary {
   display: none;
 }
 /*.my-abstract:hover .my-abstract-content{display:block}*/
+
+.my-button-filter{
+  padding: 8px 10px;
+  border-radius: 20px;
+  font-weight: normal;
+  letter-spacing: 10%;
+  font-size: 55%;
+  color: rgb(57, 57, 57);
+}
 
 .my-icon-Google:hover{color:#4081EC;}
 .my-button-Google:hover{background-color:#4081EC;}
